@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Analyze</title>
+    <script>
+        const setEmotion = () => {
+            let emotion = document.getElementById('emotion');
+            emotion.innerHTML = 'Sad';
+        }
+        const clicked = (e) => {
+            alert('Your lyrics are being analyzed. This may take a few seconds.');
+            setEmotion();
+        }
+    </script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="licks.html">Library</a></li>
+            <li><a href="sentiment.html">Analyze</a></li>
+        </ul>
+    </nav>
+    <h1>Analyze Lyrics</h1>
+    <h3>Copy and Paste your lyrics into the text box then submit them to see what emotion they provoke.</h3>
+
+    <!-- Table Below This -->
+    <form >
+        <label >Lyrics:</label>
+        <textarea rows="4" cols="50">
+        </textarea>
+        <br><br>
+        <input type="submit" value="Submit" onclick="clicked(); return false;">
+    </form>
+        
+    <p>Click the "Submit" button and your lyrics emotion will be displayed below.</p>
+    <h3>Your lyrics provoke: <span id="emotion"></span></h3>
+    
+
+</body>
+</html>
